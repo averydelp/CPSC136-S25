@@ -34,6 +34,8 @@ int main()                                          //Line 5
     listTwo.insertAt(5, 34);                        //Line 22
     listTwo.insertAt(2, -76);                       //Line 23
 
+   //list 2 gets modifed but so does list 1
+  // problem with shallow copy 
     cout << "Line 24: After modifying listTwo: ";   //Line 24
     listTwo.print();                                //Line 25
     cout << endl;                                   //Line 26
@@ -53,6 +55,8 @@ int main()                                          //Line 5
          << "testCopyConst, " << endl
          << "         listOne is: ";                //Line 32
 
+    // set fault because you do not havve this array anymore
+    // deconstructor destoryed it
     listOne.print();                                //Line 33
     cout << endl;                                   //Line 34
 
@@ -75,4 +79,5 @@ void testCopyConst(ptrMemberVarType temp)           //Line 37
 
     cout << "Line 47: *** Exiting the function "
          << "testCopyConst ***" << endl;           //Line 47
-}                                                  //Line 48
+}      //destorys the dymanic varible for list 1  //Line 48
+
