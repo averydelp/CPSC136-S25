@@ -49,6 +49,8 @@ ptrMemberVarType::~ptrMemberVarType()
 }
 
     //copy constructor
+   // list two does not modify list one
+  // deep copy 
 ptrMemberVarType::ptrMemberVarType 
                   (const ptrMemberVarType& otherObject)
 {
